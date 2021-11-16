@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="243dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorAccent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="Organizing  Events"
+            android:textSize="35dp" />
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="202dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/applogo"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/mainpage1"
+                        android:scaleType="fitXY"/>
+                    <ImageView
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/mainpage3"
+                        android:scaleType="fitXY"/>
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/mainpage5"
+                        android:scaleType="fitXY"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp">
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/mainpage2"
+                        android:scaleType="fitXY"/>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/mainpage4" />
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/mainpage6"
+                        android:scaleType="fitXY"/>
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="327dp"
+            android:layout_height="82dp"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btn_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/designed_button"
+                android:onClick="openSignUp"
+                android:text="Sign Up" />
+
+            <Button
+                android:id="@+id/btn_signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginLeft="150dp"
+                android:background="@drawable/designed_button"
+                android:onClick="openSignIn"
+                android:text="Sign In" />
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>

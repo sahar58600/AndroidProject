@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="243dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="What a Party"
+            android:textSize="35dp" />
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="202dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/applogo"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:weightSum="8"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:text="Organizer Name:"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dialog_organizerName"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="Eyal Golan"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:weightSum="8"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:textSize="20dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:layout_weight="6"
+                android:text="Code:"
+                android:textColor="@color/colorAccent"
+                />
+
+            <TextView
+                android:id="@+id/dialog_code"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="Eyal Golan"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:weightSum="8"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:textSize="20dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:layout_weight="6"
+                android:text="Number of Participants:"
+                android:textColor="@color/colorAccent"
+                />
+
+            <TextView
+                android:id="@+id/dialog_numberOfParticipants"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="Eyal Golan"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:weightSum="8"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:textSize="20dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:layout_weight="6"
+                android:text="Location:"
+                android:textColor="@color/colorAccent"
+                />
+
+            <TextView
+                android:id="@+id/dialog_location"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="Eyal Golan"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+        </TableRow>
+
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:weightSum="8"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:textSize="20dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:layout_weight="6"
+                android:text="Date:"
+                android:textColor="@color/colorAccent"
+                />
+
+            <TextView
+                android:id="@+id/dialog_date"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="Eyal Golan"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:weightSum="8"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:textSize="20dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:layout_weight="6"
+                android:text="Time:"
+                android:textColor="@color/colorAccent"
+                />
+
+            <TextView
+                android:id="@+id/dialog_time"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="Eyal Golan"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+        </TableRow>
+
+
+
+
+
+    </TableLayout>
+
+
+
+
+</LinearLayout>
