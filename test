@@ -1,0 +1,49 @@
+{
+    "id": "string",
+    "post_id": "string|null",
+    "update_time": "number",
+    "channel": {
+        "name": "string",
+        "id": "string|null"
+    },
+    "original_content": "string",
+    "summary": "string",
+    "media_url": "string|null",
+    "source_language": "string|null",
+    "title": "string|null",
+    "city": "string|null",
+    "type": "string|null",
+    "place": "string|null",
+    "involves": "string|null",
+    "casualties": {
+        "blue_side": {
+            "lightly_injured": "string|null",
+            "moderately_injured": "string|null",
+            "seriously_injured": "string|null",
+            "critical_injured": "string|null",
+            "deaths": "string|null"
+        },
+        "red_side": {
+            "lightly_injured": "string|null",
+            "moderately_injured": "string|null",
+            "seriously_injured": "string|null",
+            "critical_injured": "string|null",
+            "deaths": "string|null"
+        }
+    },
+    "source": "string|null",
+    "date": "string|null",
+    "time": "string|null",
+    "tags": "string|null",
+    "reliability": "string|null",
+    "verification_status": "string|null|undefined",
+    "incident_priority": "string|null|undefined",
+    "geo": {
+        "locations": "string|null|undefined",
+        "regions": "string|null|undefined",
+        "source": "string|null|undefined",
+        "point_id": "string|null|undefined",
+        "geography": "string|null|undefined",
+        "neighborhood": "string|null|undefined"
+    }
+}
