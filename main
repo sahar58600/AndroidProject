@@ -1,0 +1,68 @@
+import logging
+import os
+import sys
+import asyncio
+import socket
+from fastapi import FastAPI
+from telethon import TelegramClient, events
+from constants import BOT_TOKEN, CHANNELS, API_HASH, API_ID, PROJECT_ID
+from utils import get_storage_client, process_message
+import uvicorn
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+
+# Initialize Telegram bot client
+client = TelegramClient("bot", API_ID, API_HASH)
+
+# Initialize FastAPI app
+app = FastAPI()
+
+@app.get("/")
+async def home():
+    return {"message": "Telegram bot is running!"}
+
+@app.get("/health")
+async def health_check():
+    """Health check endpoint to prevent Cloud Run from shutting down"""
+    return {"status": "ok"}
+
+@client.on(events.NewMessage(chats=CHANNELS))
+async def handler(event):
+    """Handle incoming messages from the configured Telegram channels"""
+    await process_message(event)
+
+async def start_bot():
+    """Start Telegram bot"""
+    logging.info(f"Listening to channels: {CHANNELS}")
+    await client.start(bot_token=BOT_TOKEN)
+    await client.run_until_disconnected()
+
+async def start_api():
+    """Start FastAPI server without blocking"""
+    config = uvicorn.Config(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8080))) 
+    server = uvicorn.Server(config)
+    await server.serve()
+
+async def main():
+    """Main function to start both Telegram bot and API"""
+    os.environ["GCLOUD_PROJECT"] = PROJECT_ID
+    get_storage_client()  # Ensure Google Cloud Storage is initialized
+
+    # Test Telegram API connection before starting
+    try:
+        logging.info("Trying to connect to Telegram API...")
+        socket.create_connection(("api.telegram.org", 443), timeout=5)
+        logging.info("Connected to Telegram API successfully!")
+    except Exception as e:
+        logging.error(f"Failed to connect to Telegram API: {e}")
+        sys.exit(1)
+
+    # Run Telegram bot & FastAPI server together
+    bot_task = asyncio.create_task(start_bot())
+    api_task = asyncio.create_task(start_api())
+
+    await asyncio.gather(bot_task, api_task)
+
+if __name__ == "__main__":
+    asyncio.run(main())  # Ensures proper execution on Cloud Run
