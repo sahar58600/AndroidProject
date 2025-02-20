@@ -47,3 +47,219 @@
         "neighborhood": "string|null|undefined"
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+schema = jsoncode([
+  {
+    name = "id",
+    type = "STRING"
+  },
+  {
+    name = "post_id",
+    type = "STRING"
+  },
+  {
+    name = "update_time",
+    type = "NUMBER"
+  },
+  {
+    name = "channel",
+    type = "OBJECT",
+    attributes = [
+      {
+        name = "name",
+        type = "STRING"
+      },
+      {
+        name = "id",
+        type = "STRING"
+      }
+    ]
+  },
+  {
+    name = "original_content",
+    type = "STRING"
+  },
+  {
+    name = "summary",
+    type = "STRING"
+  },
+  {
+    name = "media_url",
+    type = "STRING"
+  },
+  {
+    name = "source_language",
+    type = "STRING"
+  },
+  {
+    name = "title",
+    type = "STRING"
+  },
+  {
+    name = "city",
+    type = "STRING"
+  },
+  {
+    name = "type",
+    type = "STRING"
+  },
+  {
+    name = "place",
+    type = "STRING"
+  },
+  {
+    name = "involves",
+    type = "STRING"
+  },
+  {
+    name = "casualties",
+    type = "OBJECT",
+    attributes = [
+      {
+        name = "blue_side",
+        type = "OBJECT",
+        attributes = [
+          {
+            name = "lightly_injured",
+            type = "STRING"
+          },
+          {
+            name = "moderately_injured",
+            type = "STRING"
+          },
+          {
+            name = "seriously_injured",
+            type = "STRING"
+          },
+          {
+            name = "critical_injured",
+            type = "STRING"
+          },
+          {
+            name = "deaths",
+            type = "STRING"
+          }
+        ]
+      },
+      {
+        name = "red_side",
+        type = "OBJECT",
+        attributes = [
+          {
+            name = "lightly_injured",
+            type = "STRING"
+          },
+          {
+            name = "moderately_injured",
+            type = "STRING"
+          },
+          {
+            name = "seriously_injured",
+            type = "STRING"
+          },
+          {
+            name = "critical_injured",
+            type = "STRING"
+          },
+          {
+            name = "deaths",
+            type = "STRING"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    name = "source",
+    type = "STRING"
+  },
+  {
+    name = "date",
+    type = "STRING"
+  },
+  {
+    name = "time",
+    type = "STRING"
+  },
+  {
+    name = "tags",
+    type = "STRING"
+  },
+  {
+    name = "reliability",
+    type = "STRING"
+  },
+  {
+    name = "verification_status",
+    type = "STRING"
+  },
+  {
+    name = "incident_priority",
+    type = "STRING"
+  },
+  {
+    name = "geo",
+    type = "OBJECT",
+    attributes = [
+      {
+        name = "locations",
+        type = "STRING"
+      },
+      {
+        name = "regions",
+        type = "STRING"
+      },
+      {
+        name = "source",
+        type = "STRING"
+      },
+      {
+        name = "point_id",
+        type = "STRING"
+      },
+      {
+        name = "geography",
+        type = "STRING"
+      },
+      {
+        name = "neighborhood",
+        type = "STRING"
+      }
+    ]
+  }
+])
