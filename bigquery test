@@ -1,0 +1,19 @@
+locals {
+  countries_schema = jsonencode([
+    { name = "country", type = "STRING" },
+    { name = "population", type = "INT64" },
+  ])
+}
+
+module "bigquery-dataset" {
+  source     = "./fabric/modules/bigquery-dataset"
+  project_id = "my-project"
+  id         = "my_dataset"
+  tables = {
+    countries = {
+      friendly_name       = "Countries"
+      schema              = local.countries_schema
+      deletion_protection = true
+    }
+  }
+}
