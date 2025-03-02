@@ -1,24 +1,242 @@
-2025-03-02 14:50:28.509 IST
-POST500395 B104 msAPIs-Google; (+https://developers.google.com/webmasters/APIs-Google.html) https://reciver-and-publisher-2qghrnhugq-zf.a.run.app/
-2025-03-02 14:50:28.525 IST
-INFO:root:starting get data
-2025-03-02 14:50:28.525 IST
-INFO:root:Received push message with id: 163078ce-343b-4db5-8029-85acd1613ea7
-2025-03-02 14:50:28.628 IST
-ERROR:root:Error processing the event: 403 Request is prohibited by organization's policy. vpcServiceControlsUniqueIdentifier: 9vKBSp5msH4TU_2lvvhJSpbLVprT5JUR_R7yWR6hPy1U72q2CE208WETVpCM29T5fmPJMqWh8jSTbdEkGQ [violations {
-2025-03-02 14:50:28.628 IST
-type: "VPC_SERVICE_CONTROLS"
-2025-03-02 14:50:28.628 IST
-description: "9vKBSp5msH4TU_2lvvhJSpbLVprT5JUR_R7yWR6hPy1U72q2CE208WETVpCM29T5fmPJMqWh8jSTbdEkGQ"
-2025-03-02 14:50:28.628 IST
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "post_id",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "update_time",
+      "type": "long"
+    },
+    {
+      "name": "channel",
+      "type": {
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "default": null,
+            "name": "id",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        ],
+        "name": "Channel",
+        "type": "record"
+      }
+    },
+    {
+      "name": "original_content",
+      "type": "string"
+    },
+    {
+      "name": "summary",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "media_url",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "source_language",
+      "type": "string"
+    },
+    {
+      "name": "title",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    },
+    {
+      "name": "place",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "involves",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "casualties",
+      "type": {
+        "fields": [
+          {
+            "name": "blue_side",
+            "type": {
+              "fields": [
+                {
+                  "default": null,
+                  "name": "lightly_injured",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                {
+                  "default": null,
+                  "name": "moderately_injured",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                {
+                  "default": null,
+                  "name": "seriously_injured",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                {
+                  "default": null,
+                  "name": "critical_injured",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                {
+                  "default": null,
+                  "name": "deaths",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              ],
+              "name": "Side",
+              "type": "record"
+            }
+          },
+          {
+            "name": "red_side",
+            "type": "Side"
+          }
+        ],
+        "name": "Casualties",
+        "type": "record"
+      }
+    },
+    {
+      "default": null,
+      "name": "source",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "default": null,
+      "name": "date",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "default": null,
+      "name": "time",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "verification_status",
+      "type": "string"
+    },
+    {
+      "name": "incident_priority",
+      "type": "string"
+    },
+    {
+      "name": "tags",
+      "type": "string"
+    },
+    {
+      "name": "geo",
+      "type": {
+        "fields": [
+          {
+            "default": null,
+            "name": "regions",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "default": null,
+            "name": "locations",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "default": null,
+            "name": "source",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "default": null,
+            "name": "point_id",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "default": null,
+            "name": "geography",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "default": null,
+            "name": "neighborhood",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        ],
+        "name": "Geo",
+        "type": "record"
+      }
+    }
+  ],
+  "name": "Avro",
+  "type": "record"
 }
-2025-03-02 14:50:28.628 IST
-, reason: "SECURITY_POLICY_VIOLATED"
-2025-03-02 14:50:28.628 IST
-domain: "googleapis.com"
-2025-03-02 14:50:28.628 IST
-metadata {
-2025-03-02 14:50:28.628 IST
-key: "uid"
-2025-03-02 14:50:28.628 IST
-value: "9vKBSp5msH4TU_2lvvhJSpbLVprT5JUR_R7yWR6hPy1U72q2CE208WETVpCM29T5fmPJMqWh8jSTbdEkGQ"
